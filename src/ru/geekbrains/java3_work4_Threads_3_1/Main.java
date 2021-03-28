@@ -14,11 +14,11 @@ public class Main {
         new Thread(()-> {
             User user1 = new User("Миша");
             try {
-            mfd.print(user1.getName());
+            mfd.print(user1);
                 Thread.sleep(1000);
-            mfd.xerox(user1.getName());
+            mfd.xerox(user1);
                 Thread.sleep(1000);
-            mfd.scan(user1.getName());
+            mfd.scan(user1);
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -28,11 +28,11 @@ public class Main {
         new Thread(()-> {
             User user2 = new User("Аня");
             try {
-                mfd.xerox(user2.getName());
+                mfd.xerox(user2);
                 Thread.sleep(1000);
-                mfd.xerox(user2.getName());
+                mfd.xerox(user2);
                 Thread.sleep(1000);
-                mfd.scan(user2.getName());
+                mfd.scan(user2);
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -42,11 +42,11 @@ public class Main {
         new Thread(()-> {
             User user3 = new User("Дима");
             try {
-                mfd.scan(user3.getName());
+                mfd.scan(user3);
                 Thread.sleep(1000);
-                mfd.scan(user3.getName());
+                mfd.scan(user3);
                 Thread.sleep(1000);
-                mfd.xerox(user3.getName());
+                mfd.xerox(user3);
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
