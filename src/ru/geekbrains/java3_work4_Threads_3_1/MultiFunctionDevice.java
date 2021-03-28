@@ -9,8 +9,7 @@ public class MultiFunctionDevice {
     private enum Action {SCAN, PRINT, XEROX}
     private volatile Set<Action> actions = new HashSet(3);
 
-    public  void scan(User user)
-    {
+    public  void scan(User user) {
         synchronized(Action.SCAN){
         System.out.println(user.getName() + " хочет отсканировать документ");
         try {
@@ -29,8 +28,7 @@ public class MultiFunctionDevice {
         }}
     }
 
-    public synchronized void print(User user)
-    {
+    public synchronized void print(User user) {
         synchronized(Action.PRINT){
         System.out.println(user.getName() + " хочет распечатать документ");
         try {
@@ -49,8 +47,7 @@ public class MultiFunctionDevice {
         } }
 }
 
-    public synchronized void xerox(User user)
-    {
+    public synchronized void xerox(User user) {
         synchronized(this){
         System.out.println(user.getName() + " хочет отксерокопировать документ");
         try {
